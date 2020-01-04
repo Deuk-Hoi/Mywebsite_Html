@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+}
+
+#MainText{
+    left: 50px;
+    width:100%;
+    top: 70px;
+    font: bold 20pt '경기천년제목';
+    color: white;
+    position: absolute;        
+}
+
+#name{
+    color:rgb(85, 186, 211);
+}
+
+#Myname{
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    border-bottom: 2px solid gray;
+    margin:0;
+}
+#Myphoto{
+    border-right:2px solid gray;
+    margin:0;
+    padding: 30px;
+    padding-right: 40px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 550px 1fr;
+}
+
+#grid #profile{
+    margin-top: 20px;
+}
+#grid li{
+    line-height: 3em;
+}
+@media(max-width: 1250px)
+{
+    #MainText{
+        font:bold 15pt '경기천년제목';
+    }
+    #Myphoto{
+        width: 300px;
+        height: 450px;
+    }
+    #grid{
+        grid-template-columns: 400px 1fr;
+    }
+    #grid li{
+        line-height: 2em;
+    }
+}
+@media(max-width: 980px)
+{
+    #MainText{
+        font:bold 13pt '경기천년제목';
+    }
+    #Myphoto{
+        display: block;
+        border-right: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #grid{
+        display: block;
+    }
+    #profile h3{
+        text-align: center;
+    }
+    #profile li{
+        font-size: 14px;
+    }
+}

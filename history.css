@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+}
+
+.historyImg{
+    background-image: url(HistoryMain.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 10em 2em 10em 2em;
+    /* padding :170px 0 100px 0; */
+   
+}
+.historyImg h2{
+    font: bold 30pt '경기천년제목';
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.HistoryGrid{
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    margin-bottom: 50px;
+}
+
+#app{
+    margin:0;
+    padding: 20px;
+}
+
+#panel{
+    margin-left: 10px;
+}
+
+#content
+{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#content h2{
+    margin-bottom: 50px;
+    color: navy;
+}
+
+@media(max-width: 1250px)
+{
+    .historyImg{
+        padding: 8em 2em 8em 2em;
+    }
+    .historyImg h2{
+        font: bold 25pt '경기천년제목';
+    }
+    #content
+    {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .HistoryGrid{
+        display: block;
+    }
+}
+
+@media(max-width: 980px)
+{
+    .historyImg{
+        padding: 7em 2em 7em 2em;
+    }
+    .historyImg h2{
+        font: bold 20pt '경기천년제목';
+    }
+    #content
+    {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    #content h2{
+        font-size: 16pt;
+    }
+    
+}
+
+@media(max-width: 600px)
+{
+    .historyImg{
+        padding: 5em 2em 5em 2em;
+    }
+    .historyImg h2{
+        font: bold 15pt '경기천년제목';
+    }
+    #content
+    {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}

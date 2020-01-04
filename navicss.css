@@ -1,0 +1,28 @@
+#NaviCSS{
+    background-color: black;
+    height: 40px;
+}
+
+#NaviCSS ul{
+    color: yellowgreen;
+    text-align: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#NaviCSS ul li{
+    color:rgb(85, 186, 211);
+    font:bold 18pt '경기천년제목';
+    margin:8px;
+    display:inline-block;
+    list-style-type:none;
+}
+#NaviCSS a{
+    text-decoration: none;
+    color:rgb(85, 186, 211);
+}
+@media(max-width: 980px)
+{
+    #NaviCSS ul li{
+        font-size: 17px;
+    }
+}

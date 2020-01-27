@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Other</title>
+    <link href="./navicss.css" rel = "stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./other.js"></script>
+    <link rel='stylesheet' href="other.css">
+</head>
+<body>
+    <div id = "NaviCSS">
+        <ul>    
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "history.html">History</a></li>
+            <li><a href = "cooking.html">Cooking</a></li>
+            <li><a href = "other.html">Other</a></li>
+        </ul>
+    </div>
+    <div id = "otherimg"><h2>Other</h2></div>
+
+    <div id = 'API'>API</div>
+    
+    <div id = 'grid'>
+        <div>
+            <select id="area" onchange="area()">
+                <option value="">지역선택</option>
+                <option value="Cheonan">천안시</option>
+                <option value="Asan">아산시</option>
+            </select>
+            <div><h1 id = 'service'>버스 노선 검색 서비스</h1></div>
+            <div id="line">노선을 입력하시오 : <input id="inputnum" type="text" placeholder="노선번호"><input id = 'search' type="button" value="search" onclick="search()"></div>
+            <div id="updownbtn"><input id="up" type="button" value="상행" onclick="uproute()"><input id="down" type="button" value="하행" onclick="downroute()"></div>
+            <span>
+                <table id="route"></table>
+            </span>
+        </div>
+        <div>
+            <h1>번지검색 서비스</h1>
+            <div>도시: <input id = "country" type="text" > 건물명: <input id = "building" type="text" ><input id = 'btn' type="button" value="나와라 얏!" onclick="loadDoc()"></div>            
+            <table id="demo"></table>
+        </div>
+    </div>
+</body>
+</html>

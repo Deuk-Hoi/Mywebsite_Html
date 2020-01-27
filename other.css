@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+}
+h1{
+    text-align: center;
+}
+#otherimg{
+    background-image: url(OtherMain.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 10em 2em 10em 2em;      
+}
+
+#otherimg h2{
+    font: bold 30pt '경기천년제목';
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#area{
+    margin-top: 20px;
+}
+
+#API{
+    text-align: center;
+    padding: 30px;
+    font: bold 20pt '경기천년제목' ;
+    border-bottom: 1px solid black;
+}
+#line{
+    text-align: center;
+}
+
+#line input{
+    margin-left: 20px;
+}
+#up{
+    margin-top: 15px;
+    margin-right: 15px;
+}
+#updownbtn #up, #down{
+    visibility: hidden;
+    margin-bottom: 20px;
+}
+#updownbtn{
+    text-align: center;
+}
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+  text-align: center;
+}
+#route, #demo{
+    margin:auto;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+#btn{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

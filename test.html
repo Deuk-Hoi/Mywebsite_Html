@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1>번지검색 서비스</h1>
+
+  <div>도시: <input id = "country" type="text" > 건물명: <input id = "building" type="text" ></div>
+  <div id = 'btn'><input type="button" value="나와라 얏!" onclick="loadDoc()"></div>
+  
+  <table id="demo"></table>
+</body>
+</html>
+
+<script>
+  function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    country = $("#country").val();
+    building = $("#building").val();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+      }
+    };
+    xhttp.open("GET", "http://openapi.epost.go.kr/postal/retrieveLotNumberAdressAreaCdService/retrieveLotNumberAdressAreaCdService/getComplexListAreaCd?ServiceKey=4bppUTzZtqi1tLwhMbLNz36lDIGL%2FETSLGd1dwvigsRy3WZk4ALOuGJZqcyH7ERTJnouGKHO1R8jMpTTQ1VwVA%3D%3D&areaNm="+country+"&searchSe=and&srchwrd="+building, true);
+    xhttp.send();
+  }
+  function myFunction(xml) {
+    var i;
+    var xmlDoc = xml.responseXML;
+    var table="<tr><th>No</th><th>Post</th><th>Address</th></tr>";
+    var x = xmlDoc.getElementsByTagName("complexListAreaCd");
+    for (i = 0; i <x.length; i++) { 
+      table += "<tr><td>" +
+      x[i].getElementsByTagName("no")[0].childNodes[0].nodeValue +
+      "</td><td>" +
+      x[i].getElementsByTagName("zipNo")[0].childNodes[0].nodeValue +
+      "</td><td>"+
+      x[i].getElementsByTagName("adres")[0].childNodes[0].nodeValue +
+      "</td></tr>";
+    }
+    document.getElementById("demo").innerHTML = table;
+  }
+</script>
+<style>
+  table,th,td {
+    border : 1px solid black;
+    border-collapse: collapse;
+  }
+  th,td {
+    padding: 5px;
+  }
+
+  #btn{
+    margin-top: 20px;
+  }
+</style>
